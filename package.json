@@ -1,6 +1,6 @@
 {
   "name": "@dcbfe/ui",
-  "version": "0.0.6-beta.4",
+  "version": "0.0.6-beta.5",
   "description": "多彩宝移动端 UI 组件库。",
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
     "dev": "kill-port 9988 && concurrently -n dev,sync \"vuepress dev docs\" \"haoma run scripts/sync_docs.js\"",
     "test": "jest",
     "build": "haoma compile && haoma run scripts/gen_package.js",
+    "rebase": "haoma run scripts/rebase.js",
     "build-docs": "haoma run scripts/sync_docs.js --once && vuepress build docs",
     "gen-index": "vgis \"src/**/index.js\" \"docs/.vuepress/demo.js\"",
     "release": "standard-version -a",
@@ -65,6 +66,7 @@
     "prettier": "^2",
     "prompts": "^2.4.1",
     "sass-loader": "^10",
+    "slash2": "^2.0.0",
     "standard-version": "^9.3.0",
     "tbify": "^1.5.0",
     "typescript": "^4",
